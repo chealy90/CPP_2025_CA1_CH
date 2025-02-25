@@ -1,100 +1,100 @@
-1,Don Quixote,Miguel de Cervantes,1605,9.7,500
-2,A Tale of Two Cities,Charles Dickens,1859,9.6,200
-3,The Lord of the Rings,J.R.R. Tolkien,1954,9.8,150
-4,The Little Prince,Antoine de Saint-Exupéry,1943,9.5,140
-5,Harry Potter and the Sorcerer's Stone,J.K. Rowling,1997,9.7,120
-6,And Then There Were None,Agatha Christie,1939,9.3,100
-7,The Hobbit,J.R.R. Tolkien,1937,9.5,100
-8,Dream of the Red Chamber,Cao Xueqin,1791,9.4,100
-9,The Catcher in the Rye,J.D. Salinger,1951,9.0,65
-10,The Da Vinci Code,Dan Brown,2003,8.8,80
-11,The Alchemist,Paulo Coelho,1988,9.2,65
-12,The Lion the Witch and the Wardrobe,C.S. Lewis,1950,9.4,85
-13,She,H. Rider Haggard,1887,8.7,83
-14,The Adventures of Sherlock Holmes,Arthur Conan Doyle,1892,9.5,60
-15,One Hundred Years of Solitude,Gabriel García Márquez,1967,9.6,50
-16,The Great Gatsby,F. Scott Fitzgerald,1925,9.6,50
-17,The Book Thief,Markus Zusak,2005,9.3,20
-18,War and Peace,Leo Tolstoy,1869,9.8,36
-19,Crime and Punishment,Fyodor Dostoevsky,1866,9.7,30
-20,The Brothers Karamazov,Fyodor Dostoevsky,1880,9.7,25
-21,Moby-Dick,Herman Melville,1851,9.5,20
-22,Pride and Prejudice,Jane Austen,1813,9.8,40
-23,Wuthering Heights,Emily Brontë,1847,9.2,30
-24,To Kill a Mockingbird,Harper Lee,1960,9.8,40
-25,Ulysses,James Joyce,1922,9.6,20
-26,Brave New World,Aldous Huxley,1932,9.4,30
-27,The Odyssey,Homer,-700,9.9,30
-28,Les Misérables,Victor Hugo,1862,9.7,40
-29,Anna Karenina,Leo Tolstoy,1878,9.7,35
-30,Dracula,Bram Stoker,1897,9.4,30
-31,The Divine Comedy,Dante Alighieri,1320,9.8,30
-32,Fahrenheit 451,Ray Bradbury,1953,9.4,30
-33,The Sound and the Fury,William Faulkner,1929,9.3,20
-34,Lolita,Vladimir Nabokov,1955,9.5,20
-35,Bleak House,Charles Dickens,1853,9.3,20
-36,The Stranger,Albert Camus,1942,9.4,25
-37,Frankenstein,Mary Shelley,1818,9.6,30
-38,Middlemarch,George Eliot,1871,9.7,20
-39,The Iliad,Homer,-750,9.9,30
-40,The Picture of Dorian Gray,Oscar Wilde,1890,9.4,30
-41,Heart of Darkness,Joseph Conrad,1899,9.2,25
-42,Slaughterhouse-Five,Kurt Vonnegut,1969,9.3,20
-43,A Clockwork Orange,Anthony Burgess,1962,9.2,20
-44,Gone with the Wind,Margaret Mitchell,1936,9.7,30
-45,One Flew Over the Cuckoo's Nest,Ken Kesey,1962,9.3,15
-46,Catch-22,Joseph Heller,1961,9.4,20
-47,Of Mice and Men,John Steinbeck,1937,9.5,35
-48,The Grapes of Wrath,John Steinbeck,1939,9.6,30
-49,The Old Man and the Sea,Ernest Hemingway,1952,9.6,25
-50,The Count of Monte Cristo,Alexandre Dumas,1844,9.7,30
-51,Great Expectations,Charles Dickens,1861,9.5,25
-52,David Copperfield,Charles Dickens,1850,9.4,25
-53,Robinson Crusoe,Daniel Defoe,1719,9.2,20
-54,Jane Eyre,Charlotte Brontë,1847,9.6,30
-55,The Metamorphosis,Franz Kafka,1915,9.3,20
-56,Rebecca,Daphne du Maurier,1938,9.5,20
-57,The Trial,Franz Kafka,1925,9.3,15
-58,The Sun Also Rises,Ernest Hemingway,1926,9.4,20
-59,Persuasion,Jane Austen,1817,9.5,15
-60,The Magic Mountain,Thomas Mann,1924,9.3,15
-61,In Search of Lost Time,Marcel Proust,1913,9.8,20
-62,The Master and Margarita,Mikhail Bulgakov,1967,9.6,15
-63,A Farewell to Arms,Ernest Hemingway,1929,9.5,20
-64,The Prince,Machiavelli,1532,9.4,25
-65,East of Eden,John Steinbeck,1952,9.6,25
-66,The Scarlet Letter,Nathaniel Hawthorne,1850,9.3,20
-67,The House of the Spirits,Isabel Allende,1982,9.5,15
-68,The Trial and Death of Socrates,Plato,-399,9.7,20
-69,Beloved,Toni Morrison,1987,9.4,20
-70,Things Fall Apart,Chinua Achebe,1958,9.3,20
-71,The Unbearable Lightness of Being,Milan Kundera,1984,9.5,15
-72,The Name of the Rose,Umberto Eco,1980,9.4,20
-73,The Wind-Up Bird Chronicle,Haruki Murakami,1994,9.5,15
-74,The Road,Cormac McCarthy,2006,9.4,15
-75,Life of Pi,Yann Martel,2001,9.3,15
-76,White Teeth,Zadie Smith,2000,9.3,15
-77,Cloud Atlas,David Mitchell,2004,9.4,15
-78,The Shadow of the Wind,Carlos Ruiz Zafón,2001,9.3,20
-79,Love in the Time of Cholera,Gabriel García Márquez,1985,9.5,20
-80,1984,George Orwell,1949,9.8,35
-81,Animal Farm,George Orwell,1945,9.7,40
-82,The Handmaid's Tale,Margaret Atwood,1985,9.6,20
-83,Blindness,José Saramago,1995,9.4,15
-84,The Bell Jar,Sylvia Plath,1963,9.3,20
-85,The Remains of the Day,Kazuo Ishiguro,1989,9.5,20
-86,Brideshead Revisited,Evelyn Waugh,1945,9.3,15
-87,Infinite Jest,David Foster Wallace,1996,9.6,15
-88,The Goldfinch,Donna Tartt,2013,9.2,10
-89,The Secret History,Donna Tartt,1992,9.3,10
-90,On the Road,Jack Kerouac,1957,9.4,15
-91,The Glass Bead Game,Hermann Hesse,1943,9.3,15
-92,The Plague,Albert Camus,1947,9.4,15
-93,Norwegian Wood,Haruki Murakami,1987,9.5,15
-94,Madame Bovary,Gustave Flaubert,1857,9.6,20
-95,Thus Spoke Zarathustra,Friedrich Nietzsche,1883,9.4,15
-96,Germinal,Émile Zola,1885,9.5,15
-97,The Castle,Franz Kafka,1926,9.3,15
-98,Don Juan,George Gordon Byron,1819,9.4,15
-99,The Bet,Anton Chekhov,1889,9.3,15
-100,The Idiot,Fyodor Dostoevsky,1869,9.6,20
+1,Don Quixote,Miguel de Cervantes,Classic,1605,9.7,500
+2,A Tale of Two Cities,Charles Dickens,Historical Fiction,1859,9.6,200
+3,The Lord of the Rings,J.R.R. Tolkien,Fantasy,1954,9.8,150
+4,The Little Prince,Antoine de Saint-Exupéry,Children's Fiction,1943,9.5,140
+5,Harry Potter and the Sorcerer's Stone,J.K. Rowling,Fantasy,1997,9.7,120
+6,And Then There Were None,Agatha Christie,Mystery,1939,9.3,100
+7,The Hobbit,J.R.R. Tolkien,Fantasy,1937,9.5,100
+8,Dream of the Red Chamber,Cao Xueqin,Classic,1791,9.4,100
+9,The Catcher in the Rye,J.D. Salinger,Classic,1951,9.0,65
+10,The Da Vinci Code,Dan Brown,Thriller,2003,8.8,80
+11,The Alchemist,Paulo Coelho,Adventure,1988,9.2,65
+12,The Lion the Witch and the Wardrobe,C.S. Lewis,Fantasy,1950,9.4,85
+13,She,H. Rider Haggard,Adventure,1887,8.7,83
+14,The Adventures of Sherlock Holmes,Arthur Conan Doyle,Mystery,1892,9.5,60
+15,One Hundred Years of Solitude,Gabriel García Márquez,Magical Realism,1967,9.6,50
+16,The Great Gatsby,F. Scott Fitzgerald,Classic,1925,9.6,50
+17,The Book Thief,Markus Zusak,Historical Fiction,2005,9.3,20
+18,War and Peace,Leo Tolstoy,Historical Fiction,1869,9.8,36
+19,Crime and Punishment,Fyodor Dostoevsky,Classic,1866,9.7,30
+20,The Brothers Karamazov,Fyodor Dostoevsky,Classic,1880,9.7,25
+21,Moby-Dick,Herman Melville,Adventure,1851,9.5,20
+22,Pride and Prejudice,Jane Austen,Romance,1813,9.8,40
+23,Wuthering Heights,Emily Brontë,Romance,1847,9.2,30
+24,To Kill a Mockingbird,Harper Lee,Classic,1960,9.8,40
+25,Ulysses,James Joyce,Modernist Fiction,1922,9.6,20
+26,Brave New World,Aldous Huxley,Dystopian,1932,9.4,30
+27,The Odyssey,Homer,Epic Poetry,-700,9.9,30
+28,Les Misérables,Victor Hugo,Historical Fiction,1862,9.7,40
+29,Anna Karenina,Leo Tolstoy,Classic,1878,9.7,35
+30,Dracula,Bram Stoker,Gothic Fiction,1897,9.4,30
+31,The Divine Comedy,Dante Alighieri,Epic Poetry,1320,9.8,30
+32,Fahrenheit 451,Ray Bradbury,Dystopian,1953,9.4,30
+33,The Sound and the Fury,William Faulkner,Modernist Fiction,1929,9.3,20
+34,Lolita,Vladimir Nabokov,Psychological Fiction,1955,9.5,20
+35,Bleak House,Charles Dickens,Classic,1853,9.3,20
+36,The Stranger,Albert Camus,Existentialism,1942,9.4,25
+37,Frankenstein,Mary Shelley,Gothic Fiction,1818,9.6,30
+38,Middlemarch,George Eliot,Classic,1871,9.7,20
+39,The Iliad,Homer,Epic Poetry,-750,9.9,30
+40,The Picture of Dorian Gray,Oscar Wilde,Classic,1890,9.4,30
+41,Heart of Darkness,Joseph Conrad,Classic,1899,9.2,25
+42,Slaughterhouse-Five,Kurt Vonnegut,Satire,1969,9.3,20
+43,A Clockwork Orange,Anthony Burgess,Dystopian,1962,9.2,20
+44,Gone with the Wind,Margaret Mitchell,Historical Fiction,1936,9.7,30
+45,One Flew Over the Cuckoo's Nest,Ken Kesey,Psychological Fiction,1962,9.3,15
+46,Catch-22,Joseph Heller,Satire,1961,9.4,20
+47,Of Mice and Men,John Steinbeck,Classic,1937,9.5,35
+48,The Grapes of Wrath,John Steinbeck,Historical Fiction,1939,9.6,30
+49,The Old Man and the Sea,Ernest Hemingway,Classic,1952,9.6,25
+50,The Count of Monte Cristo,Alexandre Dumas,Adventure,1844,9.7,30
+51,Great Expectations,Charles Dickens,Classic,1861,9.5,25
+52,David Copperfield,Charles Dickens,Classic,1850,9.4,25
+53,Robinson Crusoe,Daniel Defoe,Adventure,1719,9.2,20
+54,The Metamorphosis,Franz Kafka,Absurdist Fiction,1915,9.3,20
+55,Rebecca,Daphne du Maurier,Gothic Fiction,1938,9.5,20
+56,Persuasion,Jane Austen,Romance,1817,9.5,15
+57,The Sound and the Fury,William Faulkner,Modernist Fiction,1929,9.3,20
+58,Lolita,Vladimir Nabokov,Psychological Fiction,1955,9.5,20
+59,Middlemarch,George Eliot,Classic,1871,9.7,20
+60,The Magic Mountain,Thomas Mann,Philosophical Fiction,1924,9.3,15
+61,In Search of Lost Time,Marcel Proust,Modernist Fiction,1913,9.8,20
+62,The Master and Margarita,Mikhail Bulgakov,Satire,1967,9.6,15
+63,A Farewell to Arms,Ernest Hemingway,War Fiction,1929,9.5,20
+64,The Prince,Machiavelli,Political Philosophy,1532,9.4,25
+65,East of Eden,John Steinbeck,Historical Fiction,1952,9.6,25
+66,The Scarlet Letter,Nathaniel Hawthorne,Classic,1850,9.3,20
+67,The House of the Spirits,Isabel Allende,Magical Realism,1982,9.5,15
+68,The Trial and Death of Socrates,Plato,Philosophy,-399,9.7,20
+69,Beloved,Toni Morrison,Historical Fiction,1987,9.4,20
+70,Things Fall Apart,Chinua Achebe,Classic,1958,9.3,20
+71,The Unbearable Lightness of Being,Milan Kundera,Philosophical Fiction,1984,9.5,15
+72,The Name of the Rose,Umberto Eco,Historical Fiction,1980,9.4,20
+73,The Wind-Up Bird Chronicle,Haruki Murakami,Magical Realism,1994,9.5,15
+74,The Road,Cormac McCarthy,Post-Apocalyptic Fiction,2006,9.4,15
+75,Life of Pi,Yann Martel,Adventure,2001,9.3,15
+76,White Teeth,Zadie Smith,Contemporary Fiction,2000,9.3,15
+77,Cloud Atlas,David Mitchell,Science Fiction,2004,9.4,15
+78,The Shadow of the Wind,Carlos Ruiz Zafón,Mystery,2001,9.3,20
+79,Love in the Time of Cholera,Gabriel García Márquez,Romance,1985,9.5,20
+80,The Remains of the Day,Kazuo Ishiguro,Historical Fiction,1989,9.5,20
+81,Blindness,José Saramago,Dystopian,1995,9.4,15
+82,The Bell Jar,Sylvia Plath,Psychological Fiction,1963,9.3,20
+83,Brideshead Revisited,Evelyn Waugh,Classic,1945,9.3,15
+84,Infinite Jest,David Foster Wallace,Postmodern Fiction,1996,9.6,15
+85,The Goldfinch,Donna Tartt,Contemporary Fiction,2013,9.2,10
+86,The Secret History,Donna Tartt,Psychological Fiction,1992,9.3,10
+87,On the Road,Jack Kerouac,Beat Fiction,1957,9.4,15
+88,The Glass Bead Game,Hermann Hesse,Philosophical Fiction,1943,9.3,15
+89,The Plague,Albert Camus,Existentialism,1947,9.4,15
+90,Norwegian Wood,Haruki Murakami,Romance,1987,9.5,15
+91,Madame Bovary,Gustave Flaubert,Classic,1857,9.6,20
+92,Thus Spoke Zarathustra,Friedrich Nietzsche,Philosophy,1883,9.4,15
+93,Germinal,Émile Zola,Classic,1885,9.5,15
+94,The Castle,Franz Kafka,Absurdist Fiction,1926,9.3,15
+95,Don Juan,George Gordon Byron,Poetry,1819,9.4,15
+96,The Bet,Anton Chekhov,Short Story,1889,9.3,15
+97,The Idiot,Fyodor Dostoevsky,Classic,1869,9.6,20
+98,The Iliad,Homer,Epic Poetry,-750,9.9,30
+99,The Odyssey,Homer,Epic Poetry,-700,9.9,30
+100,The Divine Comedy,Dante Alighieri,Epic Poetry,1320,9.8,30

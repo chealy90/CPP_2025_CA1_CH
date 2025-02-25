@@ -16,6 +16,7 @@ struct Book
     int bookID;
     string title;
     string author;
+    string genre;
     int release_year;
     float rating;
     float copies_sold;
@@ -28,6 +29,7 @@ void parseLine(const string &line, Book &newBook) {
     int bookID;
     string title;
     string author;
+    string genre;
     int release_year;
     float rating;
     float copies_sold;
@@ -42,6 +44,9 @@ void parseLine(const string &line, Book &newBook) {
 
     //author
     getline(ss, author, ',');
+
+    //genre
+    getline(ss, genre, ',');
 
     //release year
     getline(ss, temp, ',');
@@ -60,6 +65,7 @@ void parseLine(const string &line, Book &newBook) {
     newBook.bookID = bookID;
     newBook.title = title;
     newBook.author = author;
+    newBook.genre = genre;
     newBook.release_year = release_year;
     newBook.rating = rating;
     newBook.copies_sold = copies_sold;
@@ -106,6 +112,9 @@ void displayRow(const Book &book) {
     //author
     cout << "| " << book.author << string(26 - book.author.size(), ' ');
 
+    //genre
+    cout << "| " << book.genre << string(20 - book.genre.size(), ' ');
+
     //year
     cout << "| " << book.release_year << string(10, ' ');
 
@@ -135,7 +144,7 @@ void displayTable(const vector<Book> &books) {
     //give headers lengths to match max expected data
     //total table width is 122 chars
     cout << string(119, '-') << endl;
-    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Year Released | Rating | Copies Sold" << endl;
+    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Genre" << string(15, ' ') << "| Year Released | Rating | Copies Sold" << endl;
     cout << string(119, '-') << endl;
 
     //ROWS
@@ -151,7 +160,7 @@ void displayTable(const vector<Book> &books) {
 void displayTable(const Book &book) {
     //HEADERS
     cout << string(119, '-') << endl;
-    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Year Released | Rating | Copies Sold" << endl;
+    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Genre" << string(15, ' ') << "| Year Released | Rating | Copies Sold" << endl;
     cout << string(119, '-') << endl;
 
     displayRow(book);
@@ -168,6 +177,7 @@ void displayTable(const Book &book) {
 int main() {
     vector<Book> books;
     loadBooks(books);
+    displayTable(books);
 
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
