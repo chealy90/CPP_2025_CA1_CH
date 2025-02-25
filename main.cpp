@@ -157,6 +157,8 @@ void displayTable(const vector<Book> &books) {
     cout << string(119, '-') << endl;
 }
 
+
+
 void displayTable(const Book &book) {
     //HEADERS
     cout << string(119, '-') << endl;
@@ -167,8 +169,31 @@ void displayTable(const Book &book) {
 
     //FINAL ROW LINE
     cout << string(119, '-') << endl;
+}
 
 
+void countBooksByGenre(const vector<Book> &books) {
+    //find all genres
+    const vector<string> genres = {"Classic","Historical Fiction","Fantasy","Children's Fiction","Thriller","Mystery","Magical Realism","Romance","Gothic Fiction","Adventure","Modernist Fiction","Dystopian","Existentialism","Psychological Fiction","Satire","War Fiction","Political Philosophy","Absurdist Fiction","Science Fiction","Contemporary Fiction","Poetry","Philosophical Fiction"};
+
+    //table header
+    cout << "| Genre" + string(30, ' ') << "| Number of books" << string(5, ' ') << "|";
+
+    for (string genre: genres) {
+        //count total
+        int cnt = 0;
+        for (vector<Book>::const_iterator iter = books.cbegin(); iter != books.cend(); iter++ ) {
+            Book book = *iter;
+            if (book.genre == genre) {
+                cnt++;
+            }
+        }
+
+        //display result:   -give 40 and 20 chars to columns respectively
+        cout << "| " << genre << string(35 - genre.size(), ' ') << "| "  << cnt << string(20 - to_string(cnt).size(), ' ') << "|" << endl;
+
+
+    }
 }
 
 
@@ -177,8 +202,10 @@ void displayTable(const Book &book) {
 int main() {
     vector<Book> books;
     loadBooks(books);
-    displayTable(books);
+    //displayTable(books);
 
+    countBooksByGenre(books);
+    /*
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
         cout << "Book not found" << endl;
@@ -186,6 +213,7 @@ int main() {
         cout << "Book found at index " << indexOf << endl;
         displayTable(books[indexOf]);
     }
+    */
 
     return 0;
 }
