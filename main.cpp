@@ -9,6 +9,7 @@ struct Book;
 void parseLine();
 void loadBooks();
 void displayRow();
+void displayByName();
 
 struct Book
 {
@@ -80,6 +81,20 @@ void loadBooks(vector<Book> &books) {
     fin.close();
 }
 
+int findIndexByName(const vector<Book> &books, string searchName) {
+    int index = -1;
+    for (int i=0;i<books.size();i++) {
+        Book book = books[i];
+        //learned from: https://cppscripts.com/cpp-string-contains
+        if (book.title.find(searchName) != string::npos) {
+            index = i;
+        }
+    }
+
+    return index;
+}
+
+
 
 void displayRow(const Book &book) {
     //id is 8 chars after space
@@ -133,12 +148,34 @@ void displayTable(const vector<Book> &books) {
     cout << string(119, '-') << endl;
 }
 
+void displayTable(const Book &book) {
+    //HEADERS
+    cout << string(119, '-') << endl;
+    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Year Released | Rating | Copies Sold" << endl;
+    cout << string(119, '-') << endl;
+
+    displayRow(book);
+
+    //FINAL ROW LINE
+    cout << string(119, '-') << endl;
+
+
+}
+
 
 
 
 int main() {
     vector<Book> books;
     loadBooks(books);
-    displayTable(books);
+
+    int indexOf = findIndexByName(books, "Thot");
+    if (indexOf == -1) {
+        cout << "Book not found" << endl;
+    } else {
+        cout << "Book found at index " << indexOf << endl;
+        displayTable(books[indexOf]);
+    }
+
     return 0;
 }
