@@ -6,6 +6,7 @@
 #include <list>
 #include <algorithm>
 #include <iomanip>
+#include <map>
 
 using namespace std;
 struct Book;
@@ -142,13 +143,6 @@ void displayRow(const Book &book) {
 }
 
 void displayTable(const vector<Book> &books) {
-    /*
-    float num = 9.7;
-    float ratingTemp = num * 100;
-    int ratingStringLen = to_string((float) ratingTemp / 100).size();
-    cout << ratingStringLen << endl;
-    */
-
 
     //HEADERS
     //give headers lengths to match max expected data
@@ -182,13 +176,15 @@ void displayTable(const Book &book) {
 }
 
 
-void countBooksByGenre(const vector<Book> &books) {
+map<string, int> countBooksByGenre(const vector<Book> &books) {
+    //learned from https://cplusplus.com/reference/map/map/
+
     //find all genres
     const vector<string> genres = {"Classic","Historical Fiction","Fantasy","Children's Fiction","Thriller","Mystery","Magical Realism","Romance","Gothic Fiction","Adventure","Modernist Fiction","Dystopian","Existentialism","Psychological Fiction","Satire","War Fiction","Political Philosophy","Absurdist Fiction","Science Fiction","Contemporary Fiction","Poetry","Philosophical Fiction"};
+    map<string, int> genreFreq;
+
 
     //table header
-    cout << "| Genre" + string(30, ' ') << "| Number of books" << string(5, ' ') << "|";
-
     for (string genre: genres) {
         //count total
         int cnt = 0;
@@ -197,11 +193,15 @@ void countBooksByGenre(const vector<Book> &books) {
             if (book.genre == genre) {
                 cnt++;
             }
-        }
 
-        //display result:   -give 40 and 20 chars to columns respectively
-        cout << "| " << genre << string(35 - genre.size(), ' ') << "| "  << cnt << string(20 - to_string(cnt).size(), ' ') << "|" << endl;
+
+        }
+        genreFreq.insert(pair<string, int>(genre, cnt));
+        //cout << genre << " " << cnt;
     }
+    return genreFreq;
+
+
 }
 
 void filterByGenre(const vector<Book> &books, const string &genre){
@@ -281,6 +281,63 @@ void displayRatingHighToLow(vector<Book> &books) {
 }
 
 
+void executeMenu(int &choice) {
+    cin.clear();
+    cout << "----MENU----" << endl;
+    cout << "1) Display All Books. (Q1) " << endl;
+    cout << "2) Find a book by name. (Q2)" << endl;
+    cout << "3) Analyse occurance book genres. (Q3) " << endl;
+    cout << "4) Filter books by genre. (Q4) " << endl;
+    cout << "5) Find newest, oldest and average release year of books. (Q5)" << endl;
+    cout << "6) Search for titles containing... (Q6)" << endl;
+    cout << "7) Sort Books (highest to lowest rating) (Q7)" << endl;
+    cout << "8) Exit" << endl;
+
+    //temp var to catch new line char
+    string temp;
+
+    cout << "Your Choice:";
+    cin >> choice;
+    cin.ignore();
+
+
+
+}
+
+//MENU FUNCTIONS - FOR RUNNING AND DISPLAYING RESULTS OF MENU OPTIONS
+
+void findIndexByTitleStart(const vector<Book> &books) {
+    string input;
+    cout << "--Enter book title:";
+    getline(cin, input);
+    int index = findIndexByName(books, input);
+    if (index == -1) {
+        cout  << "--Book with title '" << input << "' not found." << endl;
+    } else {
+        cout << "--Book found!" << endl;
+        displayTable(books[index]);
+    }
+}
+
+void countBooksByGenreStart(const vector<Book> &books) {
+    map<string, int> genreMap = countBooksByGenre(books);
+
+    //results
+    cout << string(62, '-') << endl;
+    cout << "| Genre" << setw(35) << "| Quantity" << setw(13) << "|" << endl;
+    cout << string(62, '-') << endl;
+
+
+    //map iteration learned from https://cplusplus.com/reference/map/map/begin/
+    for (map<string, int>::iterator iter = genreMap.begin(); iter != genreMap.end() ; ++iter) {
+        cout << "| " << iter->first << setw(32 - iter->first.size()) << "| " << iter->second << setw(11- to_string(iter->second).size()) << "|" << endl;
+    }
+
+    cout << string(62, '-') << endl;
+
+
+}
+
 
 
 
@@ -289,21 +346,21 @@ void displayRatingHighToLow(vector<Book> &books) {
 int main() {
     vector<Book> books;
     loadBooks(books);
-    displayTable(books);
+    int choice = 0;
+    do {
+        executeMenu(choice);
+        switch (choice) {
+            case 1:
+                displayTable(books);
+                break;
+            case 2:
+                findIndexByTitleStart(books);
+                break;
+            case 3:
+                countBooksByGenreStart(books);
+        }
+    } while (choice != 8);
 
-    //countBooksByGenre(books);
-    //filterByGenre(books, "Fantasy");
-    //analyseReleaseYears(books);
-    //displayRatingHighToLow(books);
-    /*
-    int indexOf = findIndexByName(books, "Thot");
-    if (indexOf == -1) {
-        cout << "Book not found" << endl;
-    } else {
-        cout << "Book found at index " << indexOf << endl;
-        displayTable(books[indexOf]);
-    }
-    */
 
     return 0;
 }
