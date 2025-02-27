@@ -191,10 +191,21 @@ void countBooksByGenre(const vector<Book> &books) {
 
         //display result:   -give 40 and 20 chars to columns respectively
         cout << "| " << genre << string(35 - genre.size(), ' ') << "| "  << cnt << string(20 - to_string(cnt).size(), ' ') << "|" << endl;
-
-
     }
 }
+
+void filterByGenre(const vector<Book> &books, const string &genre){
+    vector<Book> filteredBooks;
+
+    for (Book book: books){
+        if (book.genre == genre){
+            filteredBooks.push_back(book);
+        }
+    }
+
+    displayTable(filteredBooks);
+}
+
 
 
 
@@ -204,7 +215,8 @@ int main() {
     loadBooks(books);
     //displayTable(books);
 
-    countBooksByGenre(books);
+    //countBooksByGenre(books);
+    filterByGenre(books, "Fantasy");
     /*
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
