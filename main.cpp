@@ -105,7 +105,7 @@ int findIndexByName(const vector<Book> &books, string searchName) {
     return index;
 }
 
-
+// DATA DISPLAYING METHODS
 
 void displayRow(const Book &book) {
     //id is 8 chars after space
@@ -142,6 +142,7 @@ void displayRow(const Book &book) {
 
 }
 
+//overloaded methods to allow multiple data types to be displayed in table format
 void displayTable(const vector<Book> &books) {
 
     //HEADERS
@@ -161,7 +162,23 @@ void displayTable(const vector<Book> &books) {
     cout << string(119, '-') << endl;
 }
 
+void displayTable(const list<Book> &books) {
+    //HEADERS
+    //give headers lengths to match max expected data
+    //total table width is 122 chars
+    cout << string(119, '-') << endl;
+    cout << "| ID | " << "Title" << setw(46) << "| Author" << setw(25) << "| Genre" << setw(35) << "| Year | Rating | Sold" << endl;
+    cout << string(119, '-') << endl;
 
+    //ROWS
+    for (list<Book>::const_iterator iter = books.cbegin() ; iter != books.cend() ; iter++) {
+        displayRow(*iter);
+    }
+
+
+    //FINAL ROW LINE
+    cout << string(119, '-') << endl;
+}
 
 void displayTable(const Book &book) {
     //HEADERS
@@ -256,7 +273,7 @@ int analyseReleaseYears(const vector<Book> &books){
 
 
 
-    return avg;
+    return (int) avg; //casting avg to int as it avoids showing years as floating points.
 }
 
 list<Book> searchBooksByTitle(const vector<Book> &books, const string &searchQuery) {
@@ -273,7 +290,7 @@ list<Book> searchBooksByTitle(const vector<Book> &books, const string &searchQue
 
 }
 
-void displayRatingHighToLow(vector<Book> &books) {
+void displayByRatingHighToLow(vector<Book> &books) {
     //lambda func structure taken from dermot logue's notes.
     sort(books.begin(), books.end(), [](Book book1, Book book2){return book1.rating > book2.rating;});
     cout << "Sorted Books (Rating: High to Low)" << endl;
@@ -281,6 +298,9 @@ void displayRatingHighToLow(vector<Book> &books) {
 }
 
 
+
+
+//MENU FUNCTIONS - FOR RUNNING AND DISPLAYING RESULTS OF MENU OPTIONS
 void executeMenu(int &choice) {
     cin.clear();
     cout << "----MENU----" << endl;
@@ -293,9 +313,6 @@ void executeMenu(int &choice) {
     cout << "7) Sort Books (highest to lowest rating) (Q7)" << endl;
     cout << "8) Exit" << endl;
 
-    //temp var to catch new line char
-    string temp;
-
     cout << "Your Choice:";
     cin >> choice;
     cin.ignore();
@@ -304,7 +321,6 @@ void executeMenu(int &choice) {
 
 }
 
-//MENU FUNCTIONS - FOR RUNNING AND DISPLAYING RESULTS OF MENU OPTIONS
 
 void findIndexByTitleStart(const vector<Book> &books) {
     string input;
@@ -334,7 +350,21 @@ void countBooksByGenreStart(const vector<Book> &books) {
     }
 
     cout << string(62, '-') << endl;
+}
 
+void filterByGenreStart(const vector<Book> books) {
+    string genre;
+    cout << "Enter genre:";
+    getline(cin, genre);
+    filterByGenre(books, genre);
+}
+
+void searchBooksByTitleStart(const vector<Book> books) {
+    string searchQuery;
+    cout << "Enter phrase to search for:";
+    getline(cin, searchQuery);
+    list<Book> results = searchBooksByTitle(books, searchQuery);
+    displayTable(results);
 
 }
 
@@ -358,6 +388,32 @@ int main() {
                 break;
             case 3:
                 countBooksByGenreStart(books);
+                break;
+            case 4:
+                filterByGenreStart(books);
+                break;
+            case 5: {
+                //curly bracket needed to fix "jump to case label" error
+                //converted to int to avoid having years expressed in floating points
+                int avgYear = analyseReleaseYears(books);
+                cout << "\n---Average Release Year: " << avgYear << "---\n" << endl;
+                break;
+            }
+            case 6:
+                searchBooksByTitleStart(books);
+                break;
+            case 7:
+                displayByRatingHighToLow(books);
+                break;
+            case 8:
+                cout << "---Thank you for using the application.---" << endl;
+                break;
+            default:
+                cout << "---Invalid Input---" << endl;
+                break;
+
+
+
         }
     } while (choice != 8);
 
