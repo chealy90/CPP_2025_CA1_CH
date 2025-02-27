@@ -206,6 +206,50 @@ void filterByGenre(const vector<Book> &books, const string &genre){
     displayTable(filteredBooks);
 }
 
+//part 5
+int analyseReleaseYears(const vector<Book> &books){
+    int newest = books[0].release_year;
+    int newestIndex = 0;
+    int oldest = books[0].release_year;
+    int oldestIndex = 0;
+
+    double sum = 0;
+    double avg;
+
+    for (int i=0;i<books.size();i++){
+        //newest
+        if (books[i].release_year > newest){
+            newest = books[i].release_year;
+            newestIndex = i;
+        }
+
+        if (books[i].release_year < oldest){
+            oldest = books[i].release_year;
+            oldestIndex = i;
+        }
+
+        sum += books[i].release_year;
+    }
+
+    avg = sum / books.size();
+    cout << "avg" << avg << endl;
+    cout << "*************************" << endl;
+    cout << "*Oldest Book on Record: *" << endl;
+    cout << "*************************" << endl;
+    displayTable(books[oldestIndex]);
+
+    cout << endl;
+    cout << "*************************" << endl;
+    cout << "*Newest Book on Record: *" << endl;
+    cout << "*************************" << endl;
+    displayTable(books[newestIndex]);
+
+
+
+    return avg;
+
+}
+
 
 
 
@@ -216,7 +260,8 @@ int main() {
     //displayTable(books);
 
     //countBooksByGenre(books);
-    filterByGenre(books, "Fantasy");
+    //filterByGenre(books, "Fantasy");
+    analyseReleaseYears(books);
     /*
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
