@@ -5,6 +5,7 @@
 #include <vector>
 #include <list>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 struct Book;
@@ -107,29 +108,35 @@ int findIndexByName(const vector<Book> &books, string searchName) {
 
 void displayRow(const Book &book) {
     //id is 8 chars after space
-    cout << "| " << book.bookID << string(8 - to_string(book.bookID).size() , ' ');
+    cout << "| " << book.bookID << setw(5- to_string(book.bookID).size());
 
     //title is 40 chars after space
-    cout << "| " << book.title << string(40 - book.title.size(), ' ');
+    cout << "| " << book.title << setw(45 - book.title.size());
 
     //author
-    cout << "| " << book.author << string(26 - book.author.size(), ' ');
+    cout << "| " << book.author << setw(26 - book.author.size());
 
     //genre
-    cout << "| " << book.genre << string(20 - book.genre.size(), ' ');
+    if (book.genre.size() > 18) {
+        cout << "| " << book.genre.substr(0, 18);
+    } else {
+        cout << "| " << book.genre << setw(20 - book.genre.size());
+
+    }
 
     //year
-    cout << "| " << book.release_year << string(10, ' ');
+    cout << "| " << book.release_year << setw(3);
 
     //rating
     //adapted from https://www.geeksforgeeks.org/rounding-floating-point-number-two-decimal-places-c-c/
-    int ratingTemp = (int) book.rating * 100;
-    int ratingStringLen = to_string((float) ratingTemp / 100).size();
 
-    cout << "| " << book.rating << string(4, ' ');
+    int ratingTemp = (int) book.rating * 100;
+    //int ratingStringLen = to_string((float) ratingTemp / 100).size();
+
+    cout << "| " << book.rating << setw(14 - to_string(book.rating).size());
 
     //copies sold
-    cout << "| " << book.copies_sold << string(7, ' ') << "|" << endl;
+    cout << "| " << book.copies_sold << endl;
 
 
 }
@@ -147,7 +154,7 @@ void displayTable(const vector<Book> &books) {
     //give headers lengths to match max expected data
     //total table width is 122 chars
     cout << string(119, '-') << endl;
-    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Genre" << string(15, ' ') << "| Year Released | Rating | Copies Sold" << endl;
+    cout << "| ID | " << "Title" << setw(46) << "| Author" << setw(25) << "| Genre" << setw(35) << "| Year | Rating | Sold" << endl;
     cout << string(119, '-') << endl;
 
     //ROWS
@@ -165,7 +172,7 @@ void displayTable(const vector<Book> &books) {
 void displayTable(const Book &book) {
     //HEADERS
     cout << string(119, '-') << endl;
-    cout << "| Book ID | " << "Title" << string(35, ' ') << "| Author" << string(20, ' ') << "| Genre" << string(15, ' ') << "| Year Released | Rating | Copies Sold" << endl;
+    cout << "| ID | " << "Title" << setw(46) << "| Author" << setw(25) << "| Genre" << setw(35) << "| Year | Rating | Sold" << endl;
     cout << string(119, '-') << endl;
 
     displayRow(book);
@@ -277,15 +284,17 @@ void displayRatingHighToLow(vector<Book> &books) {
 
 
 
+
+
 int main() {
     vector<Book> books;
     loadBooks(books);
-    //displayTable(books);
+    displayTable(books);
 
     //countBooksByGenre(books);
     //filterByGenre(books, "Fantasy");
     //analyseReleaseYears(books);
-    displayRatingHighToLow(books);
+    //displayRatingHighToLow(books);
     /*
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
