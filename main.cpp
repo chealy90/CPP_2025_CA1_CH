@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <list>
+#include <algorithm>
 
 using namespace std;
 struct Book;
@@ -11,6 +12,7 @@ void parseLine();
 void loadBooks();
 void displayRow();
 void displayByName();
+
 
 struct Book
 {
@@ -264,6 +266,13 @@ list<Book> searchBooksByTitle(const vector<Book> &books, const string &searchQue
 
 }
 
+void displayRatingHighToLow(vector<Book> &books) {
+    //lambda func structure taken from dermot logue's notes.
+    sort(books.begin(), books.end(), [](Book book1, Book book2){return book1.rating > book2.rating;});
+    cout << "Sorted Books (Rating: High to Low)" << endl;
+    displayTable(books);
+}
+
 
 
 
@@ -275,7 +284,8 @@ int main() {
 
     //countBooksByGenre(books);
     //filterByGenre(books, "Fantasy");
-    analyseReleaseYears(books);
+    //analyseReleaseYears(books);
+    displayRatingHighToLow(books);
     /*
     int indexOf = findIndexByName(books, "Thot");
     if (indexOf == -1) {
