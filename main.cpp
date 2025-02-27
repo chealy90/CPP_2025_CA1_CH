@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <list>
 
 using namespace std;
 struct Book;
@@ -247,6 +248,19 @@ int analyseReleaseYears(const vector<Book> &books){
 
 
     return avg;
+}
+
+list<Book> searchBooksByTitle(const vector<Book> &books, const string &searchQuery) {
+    list<Book> results;
+
+    for (vector<Book>::const_iterator iter = books.begin() ; iter!=books.end();iter++) {
+        Book book = *iter;
+        if (book.title.find(searchQuery) != string::npos) {
+            results.push_back(*iter);
+        }
+    }
+
+    return results;
 
 }
 
