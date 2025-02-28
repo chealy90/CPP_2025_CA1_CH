@@ -129,12 +129,7 @@ void displayRow(const Book &book) {
     cout << "| " << book.release_year << setw(3);
 
     //rating
-    //adapted from https://www.geeksforgeeks.org/rounding-floating-point-number-two-decimal-places-c-c/
-
-    int ratingTemp = (int) book.rating * 100;
-    //int ratingStringLen = to_string((float) ratingTemp / 100).size();
-
-    cout << "| " << book.rating << setw(14 - to_string(book.rating).size());
+    cout << "| " << setprecision(3) << book.rating<< setw(3);
 
     //copies sold
     cout << "| " << book.copies_sold << endl;
@@ -148,9 +143,9 @@ void displayTable(const vector<Book> &books) {
     //HEADERS
     //give headers lengths to match max expected data
     //total table width is 122 chars
-    cout << string(119, '-') << endl;
+    cout << string(115, '-') << endl;
     cout << "| ID | " << "Title" << setw(46) << "| Author" << setw(25) << "| Genre" << setw(35) << "| Year | Rating | Sold" << endl;
-    cout << string(119, '-') << endl;
+    cout << string(115, '-') << endl;
 
     //ROWS
     for (vector<Book>::const_iterator iter = books.cbegin() ; iter != books.cend() ; iter++) {
@@ -159,7 +154,7 @@ void displayTable(const vector<Book> &books) {
 
 
     //FINAL ROW LINE
-    cout << string(119, '-') << endl;
+    cout << string(115, '-') << endl;
 }
 
 void displayTable(const list<Book> &books) {
@@ -340,7 +335,7 @@ void countBooksByGenreStart(const vector<Book> &books) {
 
     //results
     cout << string(62, '-') << endl;
-    cout << "| Genre" << setw(35) << "| Quantity" << setw(13) << "|" << endl;
+    cout << "| Genre" << setw(35) << "| Quantity" << setw(5) << "|" << endl;
     cout << string(62, '-') << endl;
 
 
